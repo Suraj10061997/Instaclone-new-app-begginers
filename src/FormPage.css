@@ -1,0 +1,28 @@
+
+.form{
+    margin:auto;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description{
+    width:100%;
+    box-sizing: border-box;
+    margin:4px 0;
+}
+
+.author-location-div{
+    display:flex;
+}
+.author{
+    margin:4px 0;
+    margin-right:10px;
+}
+.location{
+    margin:4px 0;
+    margin-left:10px;
+}
