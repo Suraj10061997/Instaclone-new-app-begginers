@@ -36,7 +36,7 @@ const FormPage = (props) => {
               "content-type":"multipart/form-data",
             }
           }
-          axios.post("http://localhost:5000",
+          axios.post("https://instaclone-app-beginners.herokuapp.com/",
             formData,config
         )
           .then((res)=>{

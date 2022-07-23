@@ -49,7 +49,7 @@ let Top = (props) =>{
   useEffect(()=>{
     alert("FETCHING DATA TAKES TIME , KINDLY WAIT AND REFRESH THE BROWSER IN SMALL INTERVAL");
     axios
-      .get("http://localhost:5000")
+      .get("https://instaclone-app-beginners.herokuapp.com/")
       .then((res)=>setData(res.data.reverse()))
       .catch((err)=>console.log(err,"it has an error"));
   },[])
