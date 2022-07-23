@@ -23,7 +23,8 @@ let today = new Date();
 let date=months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
 
 
-
+// /https://www.youtube.com/watch?v=Z_D4w6HmT8k
+//https://62dbd756e705d101a6a568cb--mellow-vacherin-42e0ed.netlify.app/
 
 function App() {
 
@@ -47,7 +48,7 @@ let Top = (props) =>{
 
 
   useEffect(()=>{
-    alert("FETCHING DATA TAKES TIME , KINDLY WAIT AND REFRESH THE BROWSER IN SMALL INTERVAL");
+    // alert("FETCHING DATA TAKES TIME , KINDLY WAIT AND REFRESH THE BROWSER IN SMALL INTERVAL");
     axios
       .get("https://instaclone-app-beginners.herokuapp.com/")
       .then((res)=>setData(res.data.reverse()))
