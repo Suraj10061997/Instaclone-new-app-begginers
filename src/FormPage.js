@@ -1,16 +1,17 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
 import './App.css';
 import "./FormPage.css";
 import axios from "axios";
 const FormPage = (props) => {
-
- 
+  
   const navigate = useNavigate();
   const [author, setAuthor] = useState("");
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [file,setFile] = useState();
+  // const [formLoading,setFormLoading]=useState(true);
  
   const OnFileChange = (event) =>{
     console.log(event.target.files[0]);
@@ -36,11 +37,12 @@ const FormPage = (props) => {
               "content-type":"multipart/form-data",
             }
           }
-          axios.post("https://instaclone-app-beginners.herokuapp.com/",
+          axios.post("http://localhost:5000",
             formData,config
         )
           .then((res)=>{
             console.log(res);
+
           })
           .catch((err)=>{
             console.log(err,"fetching failed");
@@ -56,18 +58,7 @@ const FormPage = (props) => {
 
   return (
     <div className="wrapper" style={{height:"100vh"}}>
-
-        <div className='top'>
-        <div className='image-container-1'>
-        <img className='img' src={props.nested_circle} alt=""></img>
-        </div>
-        <span className='top-text'>Instaclone</span>
-        <div className='image-container-2'>
-        <img className='img' src={props.insta_camera} alt=""></img>
-        </div>
-        </div>
-
-
+    <Header></Header>
     <form className="form" onSubmit={handleSubmit}>
 
         <div>
