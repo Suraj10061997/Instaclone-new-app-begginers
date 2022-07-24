@@ -19,7 +19,7 @@ function App() {
   useEffect(()=>{
     // alert("FETCHING DATA TAKES TIME , KINDLY WAIT AND REFRESH THE BROWSER IN SMALL INTERVAL");
     axios
-      .get("http://localhost:5000")
+      .get("https://instaclone-new-app-2.herokuapp.com/")
       .then((res)=>{
         setData(res.data.reverse());
         // setLoading(false);
